@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="representative"
+            type="com.example.android.politicalpreparedness.representative.model.Representative" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#C5D2F8"
+        android:elevation="18dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/president_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginTop="@dimen/default_padding"
+                app:profileImage="@{representative.official.photoUrl}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_padding"
+                android:text="@{representative.office.name.toString()}"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/president_image"
+                app:layout_constraintTop_toTopOf="@+id/president_image" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_padding"
+                android:text="@{representative.official.name}"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/president_image"
+                app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+            <TextView
+                android:id="@+id/party_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                android:layout_marginTop="@dimen/default_padding"
+                android:text="@{representative.official.party.toString()}"
+                app:layout_constraintBottom_toBottomOf="@+id/president_image"
+                app:layout_constraintStart_toEndOf="@+id/president_image"
+                app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+            <ImageView
+                android:id="@+id/web_item_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/large_padding"
+                app:layout_constraintBottom_toBottomOf="@+id/party_text"
+                app:layout_constraintEnd_toStartOf="@+id/facebook_item_image"
+                app:layout_constraintTop_toBottomOf="@+id/title_text"
+                app:srcCompat="@drawable/ic_www" />
+
+            <ImageView
+                android:id="@+id/facebook_item_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/large_padding"
+                app:layout_constraintBottom_toBottomOf="@+id/party_text"
+                app:layout_constraintEnd_toStartOf="@+id/twitter_item_image"
+                app:layout_constraintTop_toBottomOf="@+id/title_text"
+                app:srcCompat="@drawable/ic_facebook" />
+
+            <ImageView
+                android:id="@+id/twitter_item_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/large_padding"
+                app:layout_constraintBottom_toBottomOf="@+id/party_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_text"
+                app:srcCompat="@drawable/ic_twitter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
+
+

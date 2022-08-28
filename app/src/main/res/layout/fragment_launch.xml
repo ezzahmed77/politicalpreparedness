@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.politicalpreparedness.MainActivity">
+
+
+        <Button
+            android:id="@+id/upcomingButton"
+            style="@style/buttonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginEnd="@dimen/large_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="@string/upcoming_elections"
+            app:layout_constraintBottom_toTopOf="@+id/representativeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/representativeButton"
+            style="@style/buttonStyle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginEnd="@dimen/large_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="@string/find_my_representatives"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/very_large_padding"
+            android:layout_marginTop="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_marginBottom="@dimen/very_large_padding"
+            app:layout_constraintBottom_toTopOf="@+id/upcomingButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ballot_logo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

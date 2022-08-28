@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android.politicalpreparedness.election.VoterInfoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.politicalpreparedness.MainActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/election_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#263063"
+            android:backgroundTint="#673AB7"
+            android:padding="@dimen/default_padding"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Election Name!"
+            app:titleTextColor="#FFFFFF" />
+
+
+        <TextView
+            android:id="@+id/electionDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginTop="@dimen/large_padding"
+            android:text="Electoin Date: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/election_name" />
+
+        <TextView
+            android:id="@+id/election_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginTop="18dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/electionDateText"
+            app:layout_constraintTop_toBottomOf="@+id/election_name"
+            tools:text="12 November 2055" />
+
+        <TextView
+            android:id="@+id/election_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginTop="@dimen/very_large_padding"
+            android:text="Election Information"
+            android:textColor="#7C7676"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/electionDateText" />
+
+        <Button
+            android:id="@+id/voterInfoButton"
+            style="@style/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginTop="@dimen/very_large_padding"
+            android:text="Voter Info"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/election_info" />
+
+        <Button
+            android:id="@+id/ballotInfoButton"
+            style="@style/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:text="Ballot Info"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/election_info" />
+
+        <Button
+            android:id="@+id/followButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginEnd="@dimen/large_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:backgroundTint="#3F51B5"
+            android:text="Follow"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
